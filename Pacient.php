@@ -7,7 +7,7 @@ class Pacient
         private ?string $meno = null,
         private ?string $priezvisko = null,
         private ?string $pricinaPobytu = null,
-        private         $datetime = null,
+        private         $dobaZaradenia = null,
         private int     $pohlavie = 0)
     {
 
@@ -43,11 +43,7 @@ class Pacient
     public function setPriezvisko($priezvisko)
     {
         $this->priezvisko = $priezvisko;
-
-
     }
-
-
 
     /**
      * @return int
@@ -82,19 +78,20 @@ class Pacient
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getDatetime()
+    public function getDobaZaradenia()
     {
-        return $this->datetime;
+        $date = date_create($this->dobaZaradenia);
+        return date_format($date, "Y-m-d");
     }
 
     /**
-     * @param mixed $datetime
+     * @param mixed $dobaZaradenia
      */
-    public function setDatetime($datetime)
+    public function setDobaZaradenia($dobaZaradenia)
     {
-        $this->datetime = $datetime;
+        $this->dobaZaradenia = $dobaZaradenia;
     }
 
     /**

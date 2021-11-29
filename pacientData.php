@@ -1,22 +1,28 @@
 <?php
+session_start();
 
-//require "App.php";
-require_once ("DatabaseSklad.php");
-require_once ("Pacient.php");
+$url = 'https://images3.alphacoders.com/101/thumb-1920-1010294.jpg';
 
-//$pacientKonkretneData;
+if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+    header("Location: index.php?sessionExpired=1");
+    exit;
+}
 
-//$app = new App();
+require_once("DatabaseSklad.php");
+require_once("Pacient.php");
 
 $db = new DatabaseSklad();
 
-//$db->storePacienta(new Pacient("Adam", "B","Alkoholik",date('Y-m-d H:i:s'),0));
-$ulozPacientov = $db->getPacient(1);
-var_dump($ulozPacientov);
+$pacienti = $db->getAllPacienti();
 
-echo "ahoj sequal"; exit;
-
+if (isset($_GET['del'])) {
+    $id = $_GET['del'];
+    $db->deletePacient($id);
+    header("location: pacientData.php");
+}
+$count = 1;
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -49,30 +55,33 @@ echo "ahoj sequal"; exit;
             <thead>
             <a href="#" class="btn btn-primary btn-xs pull-right"><b>+</b> Add new categories</a>
             <tr>
-                <th>ID</th>
-                <th>Title</th>
-                <th>Parent ID</th>
-                <th class="text-center">Action</th>
+                <th>Poradie</th>
+                <th>Číslo pacienta</th>
+                <th>Meno</th>
+                <th>Priezvisko</th>
+                <th>Pohlavie</th>
+                <th class="text-center">Príčina pobytu</th>
+                <th class="text-center">Dátum zaradenia</th>
             </tr>
             </thead>
-            <tr>
-                <td>1</td>
-                <td>News</td>
-                <td>News Cate</td>
-                <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a> <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Del</a></td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Products</td>
-                <td>Main Products</td>
-                <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a> <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Del</a></td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Blogs</td>
-                <td>Parent Blogs</td>
-                <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a> <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Del</a></td>
-            </tr>
+
+            <?php foreach($pacienti as $pacient): ?>
+                <tr>
+                    <td><?=$count++?></td>
+                    <td><?=$pacient->getId()?></td>
+                    <td><?=$pacient->getMeno()?></td>
+                    <td><?=$pacient->getPriezvisko()?></td>
+                    <td><?=$pacient->getPohlavie()?></td>
+                    <td><?=$pacient->getPricinaPobytu()?></td>
+                    <td><?=$pacient->getDobaZaradenia()?></td>
+                    <td class="text-center">
+                        <a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a>
+                    </td>
+                    <td>
+                        <a onclick="return confirm('Chcete naozaj vymazať pacienta menom <?php echo $pacient->getMeno() . " " . $pacient->getPriezvisko()?>?');" href="pacientData.php?del=<?= $pacient->getId() ?>" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Vymazať</a>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
         </table>
     </div>
 </div>
