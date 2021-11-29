@@ -24,13 +24,26 @@ echo "ahoj sequal"; exit;
     <title>Dáta pacientov</title>
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <link rel="stylesheet" href="CSS/dataPacientov.css">
+    <link rel="stylesheet" href="CSS/pacientData.css">
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <!------ Include the above in your HEAD tag ---------->
-</head>
-<body>
 
-<div class="container">
+    <style>
+        body {
+            background-image: url('<?php echo $url ?>');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+        }
+    </style>
+
+</head>
+
+
+
+<body >
+<div class="container" >
     <div class="row col-md-6 col-md-offset-2 custyle">
         <table class="table table-striped custab">
             <thead>
@@ -64,4 +77,6 @@ echo "ahoj sequal"; exit;
     </div>
 </div>
 </body>
+
+
 </html>

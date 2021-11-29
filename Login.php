@@ -31,15 +31,10 @@ if(isset($_POST['login']))
         header("Location: index.php?nespravneUdaje=1");
         die();
     }
+    session_start();
+    $_SESSION["loggedin"] = true;
 
-    header("Location: pacientData.php");
-
-
+    header("Location: menuPage.php");
     exit;
 }
-
-
-
-
-
 ?>

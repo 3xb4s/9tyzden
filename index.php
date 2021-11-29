@@ -1,4 +1,15 @@
 <?php
+session_start();
+
+$url = 'https://wallpaperaccess.com/full/1282794.jpg';
+
+if (isset($_GET['sessionExpired'])) {
+    if ($_GET['sessionExpired'] = 1) {
+        echo '<div class="alert alert-danger"  role="alert">
+            Prihlásenie vypršalo. Je potrebné sa znovu prihlásiť.
+            </div>';
+    }
+}
 
 if(isset($_GET['nespravneUdaje']))
 {
@@ -23,6 +34,13 @@ if(isset($_GET['nespravneUdaje']))
 <head>
     <meta charset="UTF-8">
     <title>Psychiatrická liečebňa</title>
+
+    <style type="text/css">
+        body {
+            background-image: url('<?php echo $url ?>');
+            background-size: cover;
+        }
+    </style>
 </head>
 <body>
 
@@ -47,7 +65,7 @@ if(isset($_GET['nespravneUdaje']))
 
         <!-- Remind Passowrd -->
         <div id="formFooter">
-            <a class="underlineHover" href="#">Zabudli ste heslo?</a>
+            <a class="underlineHover" href="errorPage.php">Zabudli ste heslo?</a>
         </div>
 
     </div>
