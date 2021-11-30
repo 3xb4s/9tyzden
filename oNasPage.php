@@ -10,6 +10,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 <link rel="stylesheet" href="CSS/oNasPage.css">
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 
+
 <main class="site-wrapper">
     <div class="pt-table desktop-768">
         <div class="pt-tablecell page-home relative" style="background-image: url(https://images3.alphacoders.com/101/thumb-1920-1010294.jpg);
@@ -20,6 +21,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
+
                         <div class="page-title  home text-center">
                                   <span class="heading-page"> O nás
                                   </span>
@@ -56,9 +58,16 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                                 dielňa, práčovňa). Liečebňa mení svoj charakter, stáva sa dynamickým ústavom, ktorý spĺňa odborné kritériá. Veľký dôraz kladieme
                                 na vzdelávanie zdravotníckych pracovníkov na všetkých stupňoch. Cieľom snaženia všetkých pracovníkov liečebne je vytvoriť samostatný
                                 moderný ústav, ktorý bude zabezpečovať komplexnú psychiatrickú starostlivosť na vysokej úrovni.</p>
+
+                            <a href="menuPage.php">    <!-- poznamka button -->
+                                <input class="buttonik"  align="center" type="button" value="Späť" />
+                            </a>
+
                         </div>
                     </div>
                 </div>
+
+
             </div>
         </div>
     </div>
