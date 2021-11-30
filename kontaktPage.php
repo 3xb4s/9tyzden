@@ -8,6 +8,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 ?>
 
 <link rel="stylesheet" href="CSS/kontaktPage.css">
+<link rel="stylesheet" href="CSS/button.css">
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 
 <main class="site-wrapper">
@@ -36,7 +37,9 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                             <h4>* Ostatné oddelenia:	Denne: 14,00–17,00 hod.</h4>
 
 
-
+                            <a href="menuPage.php">    <!-- poznamka button -->
+                                <input class="buttonik"  align="center" type="button" value="Späť" />
+                            </a>
                              </div>
                     </div>
                 </div>

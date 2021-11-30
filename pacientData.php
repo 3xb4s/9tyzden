@@ -31,6 +31,7 @@ $count = 1;
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <link href="//stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <link rel="stylesheet" href="CSS/pacientData.css">
+    <link rel="stylesheet" href="CSS/button.css">
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <!------ Include the above in your HEAD tag ---------->
@@ -84,8 +85,14 @@ $count = 1;
                 </tr>
             <?php endforeach; ?>
         </table>
+
     </div>
 </div>
+    <div align="center" class="center">
+    <a href="menuPage.php">    <!-- poznamka button -->
+        <input class="buttonik"  align="center" type="button" value="Späť" />
+    </a>
+    </div>
 </body>
 
 

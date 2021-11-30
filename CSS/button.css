@@ -1,0 +1,20 @@
+.buttonik {
+    margin-top: 30px;
+    color: #5fbae9;
+    border-radius: 10px;
+    font-size: 20px;
+    transition-duration: 0.4s;
+    background-color: black;
+}
+
+.buttonik:hover{
+    background-color: #5fbae9;
+    color: black;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
