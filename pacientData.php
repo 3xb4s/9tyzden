@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$url = 'https://images3.alphacoders.com/101/thumb-1920-1010294.jpg';
+
 
 if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     header("Location: index.php?sessionExpired=1");
@@ -29,7 +29,7 @@ $count = 1;
     <meta charset="UTF-8">
     <title>Dáta pacientov</title>
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <link rel="stylesheet" href="CSS/dataPacientov.css">
+    <link href="//stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <link rel="stylesheet" href="CSS/pacientData.css">
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -37,10 +37,11 @@ $count = 1;
 
     <style>
         body {
-            background-image: url('<?php echo $url ?>');
+            background-image: url("image (1).png");
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-position: center;
+
         }
     </style>
 
@@ -49,19 +50,19 @@ $count = 1;
 
 
 <body >
-<div class="container" >
-    <div class="row col-md-6 col-md-offset-2 custyle">
-        <table class="table table-striped custab">
+<div class="container-fluid" >
+    <div class="row col-md-12 col-md-offset-2 custyle h-100 row align-items-center">
+        <table class="table custab table-secondary font-size">
             <thead>
-            <a href="#" class="btn btn-primary btn-xs pull-right"><b>+</b> Add new categories</a>
+            <a href="menuPage.php" class="btn btn-primary btn-xs pull-right"><b>+</b> Späť</a>
             <tr>
                 <th>Poradie</th>
                 <th>Číslo pacienta</th>
                 <th>Meno</th>
                 <th>Priezvisko</th>
                 <th>Pohlavie</th>
-                <th class="text-center">Príčina pobytu</th>
-                <th class="text-center">Dátum zaradenia</th>
+                <th>Príčina pobytu</th>
+                <th>Dátum zaradenia</th>
             </tr>
             </thead>
 
@@ -77,7 +78,7 @@ $count = 1;
                     <td class="text-center">
                         <a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a>
                     </td>
-                    <td>
+                    <td class="text-center">
                         <a onclick="return confirm('Chcete naozaj vymazať pacienta menom <?php echo $pacient->getMeno() . " " . $pacient->getPriezvisko()?>?');" href="pacientData.php?del=<?= $pacient->getId() ?>" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Vymazať</a>
                     </td>
                 </tr>

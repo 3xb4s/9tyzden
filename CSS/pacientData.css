@@ -1,3 +1,20 @@
-.p3 {
-    background-color: rgba(14, 17, 24, 0.97);
+.container-fluid {
+    width: auto !important;
+    margin-right: 0 !important;
+    margin-left: 1.25% !important;
+}
+.custab{
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin: 5% 0;
+    box-shadow: 3px 3px 2px #ccc;
+    transition: 0.5s;
+}
+.custab:hover{
+    box-shadow: 3px 3px 0px transparent;
+    transition: 0.5s;
+}
+
+.font-size{
+    font-size: 15px;
 }

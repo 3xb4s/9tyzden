@@ -51,7 +51,8 @@ h4, h5, h6 {
     line-height: 1.3; }
 
 p {
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    color: silver;}
 p:last-child {
     margin-bottom: 0; }
 
@@ -337,7 +338,7 @@ textarea, label {
     background-size: cover;
     vertical-align: middle; }
 .page-home .overlay {
-    background-color: rgba(14, 17, 24, 0.97);
+    background-color: rgba(0, 0, 0, 0.92);
 }
 
 /* End of container */

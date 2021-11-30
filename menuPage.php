@@ -38,7 +38,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                                     <div></div>
                                     <div></div>
                                 </div>
-                                <a class="hex-content">
+                                <a href="oNasPage.php" class="hex-content">
                                             <span class="hex-content-inner">
                                                 <span class="icon">
                                                     <i class="fa fa-universal-access"></i>
@@ -163,7 +163,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                                     <div></div>
                                     <div></div>
                                 </div>
-                                <a class="hex-content">
+                                <a href="kontaktPage.php" class="hex-content">
                                             <span class="hex-content-inner">
                                                 <span class="icon">
                                                     <i class="fa fa-clipboard"></i>
