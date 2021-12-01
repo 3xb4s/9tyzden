@@ -12,7 +12,7 @@ class Admin
 {
 
 }
-
+        // GETTERI A SETTERI ID PRIHLASOVACIEHO MENA A HESLA
     /**
      * @return string|null
      */

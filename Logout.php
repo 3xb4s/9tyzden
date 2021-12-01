@@ -1,13 +1,13 @@
 <?php
 session_start();
 
-// Unset all of the session variables
+// UNSETNE VSETKY SESSION VARIABLES
 $_SESSION = array();
 
-// Destroy the session.
+// ZNICENIE SESSION PRED ODCHODOM
 session_destroy();
 
-// Redirect to login page
+// AK SA ODHLASI ADMIN , TAK HO TO VRATI SPAT NA HLAVNY A.K.A INDEX PAGE
 header("location: index.php");
 exit;
 ?>

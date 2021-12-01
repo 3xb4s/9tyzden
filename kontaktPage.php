@@ -1,6 +1,8 @@
 <?php
 session_start();
 
+//KONTROLUJE , AK NIEJE ADMIN LOGNUTY , TAK DA SESSION EXPIRED ROVNY 1 A TEDA NEMOZE IST NA STRANKU
+
 if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     header("Location: index.php?sessionExpired=1");
     exit;
@@ -18,6 +20,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     background-size: cover;">
             <div class="overlay"></div>
 
+            <!-- VYPIS TEXTU S KONTAKTAMI -->
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
@@ -37,7 +40,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                             <h4>* Ostatné oddelenia:	Denne: 14,00–17,00 hod.</h4>
 
 
-                            <a href="menuPage.php">    <!-- poznamka button -->
+                            <a href="menuPage.php">    <!-- BUTTON NA VRATENIA SA DO HL.MENU -->
                                 <input class="buttonik"  align="center" type="button" value="Späť" />
                             </a>
                              </div>

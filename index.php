@@ -1,8 +1,11 @@
 <?php
 session_start();
 
+//OBRAZ POZADIA
 $url = 'https://wallpaperaccess.com/full/1282794.jpg';
 
+
+//KONTROLUJE AKY JE SESSION DO URL , AK JE SESSION EXPIRED ROVNE 1 TAK VYPISE BANNER S HLASKOU
 if (isset($_GET['sessionExpired'])) {
     if ($_GET['sessionExpired'] = 1) {
         echo '<div class="alert alert-danger"  role="alert">
@@ -11,6 +14,7 @@ if (isset($_GET['sessionExpired'])) {
     }
 }
 
+//KONTROLUJE CI JE ATRIBUT NESPRAVNE UDAJE V URL , AK JE ROVNY JEDNA , TAK VYPISE BANNER S HLASKOU
 if (isset($_GET['nespravneUdaje'])) {
     if ($_GET['nespravneUdaje'] = 1) {
         echo '<div class="alert alert-danger"  role="alert">
@@ -32,6 +36,7 @@ if (isset($_GET['nespravneUdaje'])) {
     <meta charset="UTF-8">
     <title>Psychiatrická liečebňa</title>
 
+    <!-- POZADIE -->
     <style type="text/css">
         body {
             background-image: url('<?php echo $url ?>');
@@ -53,7 +58,7 @@ if (isset($_GET['nespravneUdaje'])) {
             <p>Prihláste sa.</p>
         </div>
 
-        <!-- Login Form -->
+        <!-- LOGIN FORM -->
         <form method="post" action="Login.php">
             <input type="text" id="login" class="fadeIn second" name="name" placeholder="Prihlasovacie meno"
                    required="required" pattern="[A-Za-z0-9]{1,20}">
@@ -62,7 +67,7 @@ if (isset($_GET['nespravneUdaje'])) {
             <input type="submit" class="fadeIn fourth" name="login" value="Prihlásiť">
         </form>
 
-        <!-- Remind Passowrd -->
+        <!-- PREPOJENIE NA STRANKU ZABUDLI STE HESLO (NEFUNKCNA STRANKA , LEN NAPISE ERROR) -->
         <div id="formFooter">
             <a class="underlineHover" href="errorPage.php">Zabudli ste heslo?</a>
         </div>

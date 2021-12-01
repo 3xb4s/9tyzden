@@ -2,6 +2,8 @@
 
 class Pacient
 {
+    /*  KONSTRUKTOR PACIENTA */
+
     public function __construct(
         private int     $id = 0,
         private ?string $meno = null,
@@ -12,6 +14,8 @@ class Pacient
     {
 
     }
+
+    /* GETTERE SETTERE */
 
     /**
      * @return string|null

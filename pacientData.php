@@ -1,6 +1,7 @@
 <?php
 session_start();
 
+/* AK NIEJE ADMIN LOGNUTY NEPUSTI HO NA STRANKU */
 
 
 if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
@@ -15,14 +16,17 @@ $db = new DatabaseSklad();
 
 $pacienti = $db->getAllPacienti();
 
+/* AK JE V URL PREMENA DEL , TAK DO ID SI TO CO JE V DEL , A DELETNE PACIENTA S TYM ID , A REFRESHNE PAGE */
+
 if (isset($_GET['del'])) {
     $id = $_GET['del'];
     $db->deletePacient($id);
     header("location: pacientData.php");
 }
+/* COUNT SLUZI PRI VYTVARANI TABULKY NA POCITANIE KOLKO LUDI JE V TABULKY , AKA PORADIE */
+
 $count = 1;
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,9 +36,9 @@ $count = 1;
     <link href="//stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <link rel="stylesheet" href="CSS/pacientData.css">
     <link rel="stylesheet" href="CSS/button.css">
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-    <!------ Include the above in your HEAD tag ---------->
+    <script type="text/javascript" src="pacientData.js"></script>
+
+    <!------ BACKROUND ---------->
 
     <style>
         body {
@@ -50,12 +54,20 @@ $count = 1;
 
 
 
-<body >
-<div class="container-fluid" >
+<body>
+
+<div class="container-fluid">
+    <!-- BUTTON MODALU , NA PRIDANIE PACIENTA -->
+    <div align="center">
+        <button type="button" class="btn btn-primary buttonik buttonik-horemedzera" data-toggle="modal" data-target="#addModal">
+            + Pridať pacienta
+        </button>
+    </div>
+
     <div class="row col-md-12 col-md-offset-2 custyle h-100 row align-items-center">
         <table class="table custab table-secondary font-size">
             <thead>
-            <a href="menuPage.php" class="btn btn-primary btn-xs pull-right"><b>+</b> Späť</a>
+            <!-- VYTVORENIE TABULKY S FOREACHOM PRE TAKY POCET , KOLKO ICH MAME V DATABAZE -->
             <tr>
                 <th>Poradie</th>
                 <th>Číslo pacienta</th>

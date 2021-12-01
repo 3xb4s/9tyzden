@@ -3,8 +3,12 @@
 require_once ("DatabaseSklad.php");
 require_once ("Admin.php");
 
+/* ZLE PRIHLASOVACIE UDAJE VYPISOVACKA */
+
 $msg = "Zle zadane prihlasovacie udaje.";
 $newDB = new DatabaseSklad();
+
+/* AK ADMIN NEHA PRAZDE UDAJE , ALEBO NAPISE ZLE UDAJE , VYPISE SA SPRAVA */
 
 if(isset($_POST['login']))
 {
@@ -13,8 +17,6 @@ if(isset($_POST['login']))
 
     /** @var  Admin $admin*/
     $admin = $newDB->getAdmin($name);
-    //var_dump($admin);
-    //exit;
 
     if (empty($admin)){
         echo "<script type='text/javascript'>alert('$msg');</script>";
@@ -27,6 +29,9 @@ if(isset($_POST['login']))
         header("Location: index.php?nespravneUdaje=1");
         die();
     }
+
+    /* AK SA USPESNE PRIHLASI ADMIN , TAK HO PUSTI NA MENU PAGE */
+
     session_start();
     $_SESSION["loggedin"] = true;
 

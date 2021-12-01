@@ -2,6 +2,8 @@
 
 ?>
 
+<!-- ERROR PAGE PRE FUNKCIU ZABUDLI STE HESLO NA LOGIN STRANKE a.k.a INDEX STRANKE -->
+
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <link rel="stylesheet" href="CSS/errorPage.css">
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>

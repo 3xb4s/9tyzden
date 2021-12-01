@@ -1,6 +1,8 @@
 <?php
 session_start();
 
+/* AK ADMIN NIEJE PRIHLASENY NEPUSTI HO NA STRANKU */
+
 if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     header("Location: index.php?sessionExpired=1");
     exit;
@@ -18,6 +20,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     background-position: center;
     background-size: cover;">
             <div class="overlay"></div>
+
+            <!-- TEXT O INFO LIECEBNE -->
 
             <div class="container">
                 <div class="row">
@@ -60,7 +64,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                                 na vzdelávanie zdravotníckych pracovníkov na všetkých stupňoch. Cieľom snaženia všetkých pracovníkov liečebne je vytvoriť samostatný
                                 moderný ústav, ktorý bude zabezpečovať komplexnú psychiatrickú starostlivosť na vysokej úrovni.</p>
 
-                            <a href="menuPage.php">    <!-- poznamka button -->
+                            <a href="menuPage.php">    <!-- BUTTON SPAT -->
                                 <input class="buttonik"  align="center" type="button" value="Späť" />
                             </a>
 

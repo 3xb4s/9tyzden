@@ -16,5 +16,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
 
+.buttonik-dolemedzera {
+    margin-bottom: 50px;
+}
+
+.buttonik-horemedzera {
+    margin-top: 50px;
 }
