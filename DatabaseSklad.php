@@ -24,8 +24,10 @@ class DatabaseSklad
     //FUNKCIA STORE PACIENTA , KTORA ULOZI PACIENTA Z PARAMETRAMI DO DATABAZY
     public function storePacienta(Pacient $pacient)
     {
-        $this->con->prepare("INSERT INTO pacienti(meno,priezvisko,dobaZaradenia,pohlavie) VALUES (?,?,?,?)")
-        ->execute([$pacient->getMeno(),$pacient->getPriezvisko(),$pacient->getDatetime(),$pacient->getPohlavie()]);
+
+        $this->con->prepare("INSERT INTO pacienti(meno,priezvisko,pohlavie,pricinaPobytu,dobaZaradenia) VALUES (?,?,?,?,?)")
+        ->execute([$pacient->getMeno(),$pacient->getPriezvisko(),$pacient->getPohlavie(),$pacient->getPricinaPobytu(),date('Y-m-d H:i:s')
+        ]);
     }
 
     //GETTERI ADMINA A PACIENTA/PACIENTOV
@@ -48,5 +50,16 @@ class DatabaseSklad
     public function deletePacient(int $id)
     {
         $this->con->query("DELETE FROM pacienti WHERE id='$id'");
+    }
+
+    //FUNKCIA OPRAV PACIENT
+    public function updatePacient(Pacient $pacient) {
+        $id = $pacient->getId();
+        $meno = trim($pacient->getMeno());
+        $priezvisko = trim($pacient->getPriezvisko());
+        $pohlavie = trim($pacient->getPohlavie());
+        $pricinaPobytu = trim($pacient->getPricinaPobytu());
+
+        $this->con->query("UPDATE pacienti SET `meno` = '$meno', `priezvisko` = '$priezvisko', `pohlavie` = '$pohlavie', `pricinaPobytu` = '$pricinaPobytu' WHERE id='$id'");
     }
 }

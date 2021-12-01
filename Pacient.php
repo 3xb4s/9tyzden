@@ -8,9 +8,9 @@ class Pacient
         private int     $id = 0,
         private ?string $meno = null,
         private ?string $priezvisko = null,
+        private int     $pohlavie = 0,
         private ?string $pricinaPobytu = null,
-        private         $dobaZaradenia = null,
-        private int     $pohlavie = 0)
+        private         $dobaZaradenia = null)
     {
 
     }
