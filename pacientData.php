@@ -2,7 +2,6 @@
 session_start();
 
 /* AK NIEJE ADMIN LOGNUTY NEPUSTI HO NA STRANKU */
-
 if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     header("Location: index.php?sessionExpired=1");
     exit;
@@ -16,14 +15,12 @@ $db = new DatabaseSklad();
 $pacienti = $db->getAllPacienti();
 
 /* AK JE V URL PREMENA DEL , TAK DO ID SI TO CO JE V DEL , A DELETNE PACIENTA S TYM ID , A REFRESHNE PAGE */
-
 if (isset($_GET['del'])) {
     $id = $_GET['del'];
     $db->deletePacient($id);
     header("location: pacientData.php");
 }
 /* COUNT SLUZI PRI VYTVARANI TABULKY NA POCITANIE KOLKO LUDI JE V TABULKY , AKA PORADIE */
-
 $count = 1;
 ?>
 <!DOCTYPE html>
@@ -47,7 +44,6 @@ $count = 1;
     <script type="text/javascript" src="pacientData.js"></script>
 
     <!------ BACKROUND ---------->
-
     <style>
         body {
             background-image: url("image (1).png");
@@ -192,9 +188,7 @@ $count = 1;
                         <button type="button" class="btn btn-danger float-right" data-dismiss="modal">Close</button>
                     </form>
 
-
                 </div>
-
             </div>
         </div>
     </div>

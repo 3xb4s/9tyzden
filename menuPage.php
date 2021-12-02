@@ -2,7 +2,6 @@
 session_start();
 
 /* AK NIEJE ADMIN PRIHLASENY NEPUSTI HO NA STRANKU*/
-
 if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     header("Location: index.php?sessionExpired=1");
     exit;
@@ -13,7 +12,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 
 <!-- HLAVNE MENU -->
-
 <main class="site-wrapper">
 <div class="pt-table desktop-768">
     <div class="pt-tablecell page-home relative" style="background-image: url(https://images3.alphacoders.com/101/thumb-1920-1010294.jpg);
@@ -31,7 +29,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                     </div>
 
                     <!-- HEXAGONY S VYBEROM STRANKY NA KTORU SA CHCE IST -->
-
                     <div class="hexagon-menu clear">
                         <div class="hexagon-item">
                             <div class="hex-item">
@@ -194,6 +191,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                                 <div></div>
                                 <div></div>
                             </div>
+                            <!-- KED SA ODHLASIME , HODI NAS DO LOGOUT.PHP , KDE NAM ZRUSI SESSION A HODI NAS HO INDEX.PHP -->
                             <a href="Logout.php" class="hex-content">
                                         <span class="hex-content-inner">
                                             <span class="icon">

@@ -2,7 +2,6 @@
 session_start();
 
 /* AK ADMIN NIEJE PRIHLASENY NEPUSTI HO NA STRANKU */
-
 if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     header("Location: index.php?sessionExpired=1");
     exit;
@@ -22,7 +21,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <div class="overlay"></div>
 
             <!-- TEXT O INFO LIECEBNE -->
-
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
@@ -43,8 +41,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                                 zabezpečuje pre celý Žilinský kraj a čiastočne Trenčiansky kraj okresy Považská Bystrica, Prievidza a Ilava.
                                 Štatutárnym orgánom organizácie je riaditeľ, ktorý je oprávnený konať v mene organizácie vo všetkých veciach.
                                 Poslanie, úlohy a organizačné usporiadanie organizácie je dané organizačným poriadkom.</p>
-
-
 
                             <h1>Základné organizačné členenie je:</h1>
                             <h4>* Úsek riaditeľa</h4>

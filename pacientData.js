@@ -7,7 +7,7 @@ $('#submit').click(function(){
     $('#form1').submit();
 });
 
-<!-- FUNKCIA SUBMIT A IFKO AK SU VSETKY UDAJE NEPRAZDNE , VLOZI PACIENTA-->
+<!-- FUNKCIA  FORM SUBMIT A IFKO AK SU VSETKY UDAJE NEPRAZDNE , VLOZI PACIENTA-->
 function form_submit() {
     var meno = $("#meno").val();
     var priezvisko = $("#priezvisko").val();
@@ -15,7 +15,6 @@ function form_submit() {
     console.log(meno);
     console.log(priezvisko);
     console.log(diagnoza);
-
 
     if (meno === "" || priezvisko === "" || diagnoza === "") {
         alert("Nevyplnili ste všetky potrebné údaje");
@@ -25,7 +24,6 @@ function form_submit() {
 }
 
 <!-- FUNKCIA PREDVYPLN UDAJOV -->
-
 function predvypln(id, meno, priezvisko, pohlavie, pricinaPobytu)
 {
     $("#editModal").modal('show');

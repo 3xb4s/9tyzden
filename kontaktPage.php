@@ -2,7 +2,6 @@
 session_start();
 
 //KONTROLUJE , AK NIEJE ADMIN LOGNUTY , TAK DA SESSION EXPIRED ROVNY 1 A TEDA NEMOZE IST NA STRANKU
-
 if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     header("Location: index.php?sessionExpired=1");
     exit;

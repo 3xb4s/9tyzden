@@ -67,7 +67,7 @@ if (isset($_GET['nespravneUdaje'])) {
             <input type="submit" class="fadeIn fourth" name="login" value="Prihlásiť">
         </form>
 
-        <!-- PREPOJENIE NA STRANKU ZABUDLI STE HESLO (NEFUNKCNA STRANKA , LEN NAPISE ERROR) -->
+        <!-- PREPOJENIE NA STRANKU ZABUDLI STE HESLO (NEFUNKCNA STRANKA , HODI NAS NA ERROR PAGE) -->
         <div id="formFooter">
             <a class="underlineHover" href="errorPage.php">Zabudli ste heslo?</a>
         </div>

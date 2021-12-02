@@ -3,13 +3,11 @@
 require_once ("DatabaseSklad.php");
 require_once ("Admin.php");
 
-/* ZLE PRIHLASOVACIE UDAJE VYPISOVACKA */
-
+/* ZLE PRIHLASOVACIE UDAJE SPRAVA */
 $msg = "Zle zadane prihlasovacie udaje.";
 $newDB = new DatabaseSklad();
 
 /* AK ADMIN NEHA PRAZDE UDAJE , ALEBO NAPISE ZLE UDAJE , VYPISE SA SPRAVA */
-
 if(isset($_POST['login']))
 {
     $name = $_POST['name'];
@@ -31,7 +29,6 @@ if(isset($_POST['login']))
     }
 
     /* AK SA USPESNE PRIHLASI ADMIN , TAK HO PUSTI NA MENU PAGE */
-
     session_start();
     $_SESSION["loggedin"] = true;
 
