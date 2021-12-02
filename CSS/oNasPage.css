@@ -53,7 +53,7 @@ p:last-child {
 
 
 /*
- *  CSS Helper Class
+ *  CSS Helper Class (BOOTSTRAP)
  */
 .clear:before, .clear:after {
     content: " ";
@@ -87,7 +87,7 @@ p:last-child {
 
 
 /*------------------------------------------------
-	Start Styling
+	Start Styling (BOOTSTRAP)
 -------------------------------------------------*/
 .mt20{margin-top:20px;}
 .site-wrapper {
@@ -116,7 +116,7 @@ p:last-child {
 
 
 /*------------------------------------------------
-    Home Page
+    Home Page (BOOTSTRAP)
 -------------------------------------------------*/
 .page-home {
     background-position: center center;

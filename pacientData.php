@@ -97,8 +97,7 @@ $count = 1;
                         <td class="text-center">
 
                             <!-- ZAVOLA SI FUNKCIU UPDATE , KTORA ZOABRAZI MODAL SPREDVYPLNENYMI UDAJMI PACIENTA -->
-
-                            <a id="edit<?= $count?>" onclick="predvypln(<?= $pacient->getId() ?>, '<?= $pacient->getMeno() ?>', '<?= $pacient->getPriezvisko() ?>', <?= $pacient->getPohlavie() ?>, '<?= $pacient->getPricinaPobytu() ?>')" class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a>
+                            <a id="edit<?= $count++?>" onclick="predvypln(<?= $pacient->getId() ?>, '<?= $pacient->getMeno() ?>', '<?= $pacient->getPriezvisko() ?>', <?= $pacient->getPohlavie() ?>, '<?= $pacient->getPricinaPobytu() ?>')" class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a>
                         </td>
                         <td class="text-center">
                             <a onclick="return confirm('Chcete naozaj vymazať pacienta menom <?php echo $pacient->getMeno() . " " . $pacient->getPriezvisko() ?>?');"
@@ -113,7 +112,6 @@ $count = 1;
     </div>
 
     <!-- MODAL NA PRIDANIE PACIENTA , PRICOM JE MOZOST MUZ ALEBO ZENA PRI POHLAVI , PRICOM OSTATNE UDAJE MUSIA BYT LEN PISMENA ALEBO CISLA -->
-
     <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModal" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">

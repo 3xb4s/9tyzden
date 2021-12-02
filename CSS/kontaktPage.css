@@ -1,4 +1,6 @@
 
+/* NASTAVENIE HLAVNEHO TEXTU */
+
 body {
     font-family: "Libre Baskerville", serif;
     font-weight: 400;
@@ -19,6 +21,7 @@ body {
     color: white;
 }
 
+/* NASTAVOVANIE H1-H6 A P */
 
 h1
 {
@@ -52,7 +55,7 @@ p:last-child {
 
 
 /*
- *  CSS Helper Class
+ *  CSS Helper Class (BOOTSTRAP)
  */
 .clear:before, .clear:after {
     content: " ";
@@ -86,7 +89,7 @@ p:last-child {
 
 
 /*------------------------------------------------
-	Start Styling
+	Start Styling (BOOTSTRAP)
 -------------------------------------------------*/
 .mt20{margin-top:20px;}
 .site-wrapper {
@@ -115,7 +118,7 @@ p:last-child {
 
 
 /*------------------------------------------------
-    Home Page
+    Home Page (BOOTSTRAP)
 -------------------------------------------------*/
 .page-home {
     background-position: center center;

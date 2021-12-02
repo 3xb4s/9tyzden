@@ -1,5 +1,5 @@
 
-/* BASIC */
+/* BASIC (BOOTSTRAP)*/
 
 html {
     background-color: #56baed;
@@ -29,7 +29,7 @@ h2 {
 
 
 
-/* STRUCTURE */
+/* STRUCTURE (BOOTSTRAP)*/
 
 .wrapper {
     display: flex;
@@ -67,7 +67,7 @@ h2 {
 
 
 
-/* TABS */
+/* TABS (BOOTSTRAP)*/
 
 h2.inactive {
     color: #cccccc;
@@ -80,7 +80,7 @@ h2.active {
 
 
 
-/* FORM TYPOGRAPHY*/
+/* FORM TYPOGRAPHY (BOOTSTRAP)*/
 
 input[type=button], input[type=submit], input[type=reset]  {
     background-color: #56baed;
@@ -177,7 +177,7 @@ input[type=password]::placeholder {
 }
 
 
-/* ANIMATIONS */
+/* ANIMATIONS (BOOTSTRAP)*/
 
 /* Simple CSS3 Fade-in-down Animation */
 .fadeInDown {
@@ -259,7 +259,7 @@ input[type=password]::placeholder {
     animation-delay: 1s;
 }
 
-/* Simple CSS3 Fade-in Animation */
+/* Simple CSS3 Fade-in Animation (BOOTSTRAP)*/
 .underlineHover:after {
     display: block;
     left: 0;
@@ -281,7 +281,7 @@ input[type=password]::placeholder {
 
 
 
-/* OTHERS */
+/* OTHERS (BOOTSTRAP)*/
 
 *:focus {
     outline: none;
