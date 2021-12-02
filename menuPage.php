@@ -11,6 +11,11 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 <link rel="stylesheet" href="CSS/menuPage.css">
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 
+<head>
+    <meta charset="UTF-8">
+    <title>Hlavné menu</title>
+</head>
+
 <!-- HLAVNE MENU -->
 <main class="site-wrapper">
 <div class="pt-table desktop-768">
@@ -46,7 +51,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                                             <span class="icon">
                                                 <i class="fa fa-universal-access"></i>
                                             </span>
-                                            <span class="title">O nás.</span>
+                                            <span class="title">O nás</span>
                                         </span>
                                 <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1"
                                      xmlns="http://www.w3.org/2000/svg">

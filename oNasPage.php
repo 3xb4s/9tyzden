@@ -12,6 +12,10 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 <link rel="stylesheet" href="CSS/button.css">
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 
+<head>
+    <meta charset="UTF-8">
+    <title>O nás</title>
+</head>
 
 <main class="site-wrapper">
     <div class="pt-table desktop-768">

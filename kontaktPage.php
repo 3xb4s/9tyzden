@@ -12,6 +12,11 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 <link rel="stylesheet" href="CSS/button.css">
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 
+<head>
+    <meta charset="UTF-8">
+    <title>Kontakty</title>
+</head>
+
 <main class="site-wrapper">
     <div class="pt-table desktop-768">
         <div class="pt-tablecell page-home relative" style="background-image: url(https://images3.alphacoders.com/101/thumb-1920-1010294.jpg);
